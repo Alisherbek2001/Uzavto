@@ -38,4 +38,4 @@ class SubCategory(BaseModel):
     
     class Meta:
         verbose_name = 'Subcategory'
-        verbose_name_pural = 'Subcategories'
+        verbose_name_plural = 'Subcategories'
