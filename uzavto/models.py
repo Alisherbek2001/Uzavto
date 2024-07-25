@@ -22,6 +22,7 @@ class Category(BaseModel):
 class SubCategory(BaseModel):
     name = models.CharField(max_length=255)
     slug = models.CharField(max_length=255,null=True,blank=True)
+    category = models.ForeignKey(Category,on_delete=models.CASCADE)
     TYPE_STATUS = (
         ('files','files'),
         ('pages','pages')
@@ -38,4 +39,4 @@ class SubCategory(BaseModel):
     
     class Meta:
         verbose_name = 'Subcategory'
-        verbose_name_pural = 'Subcategories'
+        verbose_name_plural = 'Subcategories'
